@@ -9,14 +9,15 @@ import tipoDocumentoRouter from "./routes/tipo.documento.routes"
 
 const app=express();
 
-//Settings
-app.set("port",4000);
-
 //Middelware
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(cors());
+  
+//Settings
+app.set( "PORT",process.env.PORT || 4000)
+
 
 //Routes 
 app.use("/api/languages",languagesRoutes),
