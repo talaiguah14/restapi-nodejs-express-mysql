@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(cors());
   
 //Settings
-app.set( "PORT",process.env.PORT || 4000)
+app.set("port",4000);
 
 
 //Routes 
