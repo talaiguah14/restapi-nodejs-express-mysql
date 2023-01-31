@@ -1,15 +1,16 @@
 import mysql from "promise-mysql";
 import config  from "./../config";
 
-const connection=mysql.createConnection({
-    host: config.host,
-    database: config.database,
-    user: config.user,
-    password: config.password
+const pool = mysql.createPool({
+    host: config.dbHost,
+    database: config.dbName,
+    user: config.dbUser,
+    port: config.dbPort,
+    password: config.dbPassword
 })
 
 const getConnection=()=>{
-    return connection;
+    return pool;
 }
 
 module.exports={
