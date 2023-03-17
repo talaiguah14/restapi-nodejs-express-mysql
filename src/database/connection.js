@@ -1,19 +1,17 @@
+import config  from "./../config";
 import sql from 'mssql';
 
 const dbSetting = {
-    user: 'sa',
-    password:'123',
-    server:'192.168.1.69',
-    database:'AppTest',
-    port:56232,
-    pool: {
-        max: 10,
-        min: 0,
-        idleTimeoutMillis: 30000
-      },
+    user: config.dbUserSql,
+    password: config.dbPasswordSql,
+    server: config.dbHostSql,
+    database: config.dbNameSql,
+    port: parseInt(config.dbPortSql,10),
+    authentication: {
+        type: 'default'
+    },
     options:{
-        encrypt:true,
-        trustServerCertificate:true,
+        encrypt: true
     }
 }
  async function getConnection(){

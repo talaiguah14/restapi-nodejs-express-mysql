@@ -10,4 +10,10 @@ export default{
     dbPort: process.env.DBBPORT || 3306,
     TOKEN_SECRET: process.env.TOKEN_SECRET || "",
 
+    dbHostSql: process.env.DBSERVESQL || "localhost",
+    dbNameSql: process.env.DBNAMESQL || "dbprueba",
+    dbUserSql: process.env.DBUSERSQL || "root",
+    dbPasswordSql: process.env.DBPASSWORDSQL || "123",
+    dbPortSql: process.env.DBBPORTSQL || 3306,
+
 }
