@@ -4,7 +4,7 @@ const dbSetting = {
     user: 'sa',
     password:'123',
     server:'192.168.1.69',
-    database:'comiclandia',
+    database:'AppTest',
     port:56232,
     pool: {
         max: 10,
